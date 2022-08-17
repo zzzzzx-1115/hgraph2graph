@@ -20,7 +20,7 @@ class Vocab(object):
 
 class PairVocab(object):
 
-    def __init__(self, smiles_pairs, cuda=True):
+    def __init__(self, smiles_pairs, cuda=False):
         cls = list(zip(*smiles_pairs))[0]
         self.hvocab = sorted( list(set(cls)) )
         self.hmap = {x:i for i,x in enumerate(self.hvocab)}
